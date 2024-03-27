@@ -1,6 +1,17 @@
 const pedido = [];
+function calcularTotal() {
+    
+    let total = 0;
+   
+    pedido.forEach(item => {
+     
+        total += item.precio;
+    });
+    
+    return total;
+}
 
-let total = 0;
+// let total = 0;
 
 let comprar = confirm("¿Deseas hacer un pedido?");
 
@@ -13,19 +24,19 @@ if (comprar) {
         switch(menu) {
             case "1":
                 pedido.push({nombre: "Milanesa Napolitana", precio: 250});
-                total += 250;
+                // total += 250;
                 break;
             case "2":
                 pedido.push({nombre: "Pizza", precio: 200});
-                total += 200;
+                // total += 200;
                 break;
             case "3":
                 pedido.push({nombre: "Hamburguesa", precio: 180});
-                total += 180;
+                // total += 180;
                 break;
             case "4":
                 pedido.push({nombre: "Chivito", precio: 300});
-                total += 300;
+                // total += 300;
                 break;
             default:
                 alert("Lo siento! Ese artículo no está incluido en el menú.");
@@ -43,14 +54,3 @@ if (pedido.length > 0) {
     alert("No se realizó ningún pedido.");
 }
 
-function calcularTotal() {
-    
-    let total = 0;
-   
-    pedido.forEach(item => {
-     
-        total += item.precio;
-    });
-    
-    return total;
-}
