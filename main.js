@@ -42,3 +42,15 @@ if (pedido.length > 0) {
 } else {
     alert("No se realizó ningún pedido.");
 }
+
+function calcularTotal() {
+    
+    let total = 0;
+   
+    pedido.forEach(item => {
+     
+        total += item.precio;
+    });
+    
+    return total;
+}
